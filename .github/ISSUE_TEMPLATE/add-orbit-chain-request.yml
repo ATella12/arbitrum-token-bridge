@@ -166,7 +166,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        You can find this information under the `"l2Contracts" : {...}` key.
+        You can find this information under the `"l2Contracts" : {...}` key if adding an L3 chain, and `"l1Contracts" : {...}` if adding an L2 chain.
   - type: input
     id: parent-customGateway
     attributes:
@@ -217,7 +217,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        You can find this information under the `"l3Contracts" : {...}` key.
+        You can find this information under the `"l3Contracts" : {...}` key if adding an L3 chain, and `"l2Contracts" : {...}` if adding an L2 chain.
   - type: input
     id: child-customGateway
     attributes:
