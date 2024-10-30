@@ -370,7 +370,10 @@ export const transformIncomingDataToOrbitChain = async (
   console.log({ isTestnet });
   const parentChainInfo = getParentChainInfo(parentChainId);
   console.log({ parentChainInfo });
-  const provider = new StaticJsonRpcProvider(parentChainInfo.rpcUrl);
+  const provider = new StaticJsonRpcProvider(
+    parentChainInfo.rpcUrl,
+    parentChainId
+  );
   console.log({ provider });
   const rollupData = await getArbitrumNetworkInformationFromRollup(
     chainData.rollup,
