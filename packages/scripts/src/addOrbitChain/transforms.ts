@@ -375,6 +375,7 @@ export const transformIncomingDataToOrbitChain = async (
     parentChainId
   );
   console.log({ provider });
+  console.log({ chainData });
   const rollupData = await getArbitrumNetworkInformationFromRollup(
     chainData.rollup,
     provider
