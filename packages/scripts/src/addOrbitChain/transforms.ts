@@ -4,7 +4,7 @@
 import * as core from "@actions/core";
 import { warning } from "@actions/core";
 import { getArbitrumNetworkInformationFromRollup } from "@arbitrum/sdk";
-import { JsonRpcProvider } from "@ethersproject/providers";
+import { StaticJsonRpcProvider } from "@ethersproject/providers";
 import axios from "axios";
 import { fileTypeFromBuffer } from "file-type";
 import * as fs from "fs";
@@ -370,7 +370,7 @@ export const transformIncomingDataToOrbitChain = async (
   console.log({ isTestnet });
   const parentChainInfo = getParentChainInfo(parentChainId);
   console.log({ parentChainInfo });
-  const provider = new JsonRpcProvider(parentChainInfo.rpcUrl, parentChainId);
+  const provider = new StaticJsonRpcProvider(parentChainInfo.rpcUrl);
   console.log({ provider });
   const rollupData = await getArbitrumNetworkInformationFromRollup(
     chainData.rollup,
