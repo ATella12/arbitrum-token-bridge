@@ -365,13 +365,18 @@ export const transformIncomingDataToOrbitChain = async (
   nativeTokenLogoPath?: string
 ): Promise<OrbitChain> => {
   const parentChainId = parseInt(chainData.parentChainId, 10);
+  console.log({ parentChainId });
   const isTestnet = TESTNET_PARENT_CHAIN_IDS.includes(parentChainId);
+  console.log({ isTestnet });
   const parentChainInfo = getParentChainInfo(parentChainId);
+  console.log({ parentChainInfo });
   const provider = new JsonRpcProvider(parentChainInfo.rpcUrl);
+  console.log({ provider });
   const rollupData = await getArbitrumNetworkInformationFromRollup(
     chainData.rollup,
     provider
   );
+  console.log({ rollupData });
 
   return {
     chainId: parseInt(chainData.chainId, 10),
