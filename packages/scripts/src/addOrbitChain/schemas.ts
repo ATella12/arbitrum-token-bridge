@@ -266,7 +266,7 @@ export const orbitChainsListSchema = z.object({
 const imageContentSchema = z.string().refine(
   (content) => {
     // Match only markdown image syntax: ![alt text](url)
-    return /!\[.*?\]\(https:\/\/.*?\)/.test(content);
+    return /!\[[^[\]]*?\]\(https:\/\/[^()]*?\)/.test(content);
   },
   {
     message:
