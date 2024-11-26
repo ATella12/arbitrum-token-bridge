@@ -80,17 +80,17 @@ export function chainIdToInfuraUrl(chainId: ChainId) {
 
   switch (chainId) {
     case ChainId.Ethereum:
-      return `https://mainnet.infura.io/v3/${infuraKey}`
+      return `https://eth-mainnet.g.alchemy.com/v2/${alchemyKey}`
     case ChainId.Sepolia:
-      return `https://sepolia.infura.io/v3/${infuraKey}`
+      return `https://eth-sepolia.g.alchemy.com/v2/${alchemyKey}`
     case ChainId.ArbitrumOne:
-      return `https://arbitrum-mainnet.infura.io/v3/${infuraKey}`
+      return `https://arb-mainnet.g.alchemy.com/v2/${alchemyKey}`
     case ChainId.Base:
-      return `https://base-mainnet.infura.io/v3/${infuraKey}`
+      return `https://base-mainnet.g.alchemy.com/v2/${alchemyKey}`
     case ChainId.ArbitrumSepolia:
-      return `https://arbitrum-sepolia.infura.io/v3/${infuraKey}`
+      return `https://arb-sepolia.g.alchemy.com/v2/${alchemyKey}`
     case ChainId.BaseSepolia:
-      return `https://base-sepolia.infura.io/v3/${infuraKey}`
+      return `https://base-sepolia.g.alchemy.com/v2/${alchemyKey}`
     default:
       return undefined
   }
